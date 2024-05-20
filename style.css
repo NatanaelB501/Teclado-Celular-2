@@ -1,0 +1,76 @@
+:root {
+    --cor-fundo: #000000;
+    --cor-fonte: #ffffff;
+    --cor-fundo-teclado: #dedfe9;
+    --cor-placeholder: #cccbcb;
+    --fonte: 'Barlow';
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-fonte);
+    font-weight: 400;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 15%;
+    text-align: center;
+    align-items: center;
+    font-family: var(--fonte);
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+input[type=tel] {
+    width: 286px;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    border: 0;
+    font-size: 32px;
+    padding-bottom: 8px;
+}
+
+input[type=tel]::placeholder {
+    text-align: center;
+    font-size: 14px;
+    color: var(--cor-placeholder);
+}
+
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px; 
+    background-color: var(--cor-fundo-teclado);
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+
+}
+
+input[type=button] {
+    font-size: 32px;
+    border-radius: 10px;
+    border-style: dotted;
+    cursor: pointer;
+    background-color: transparent;
+    height: 80px;
+    width: 80px;
+    font-family: var(--fonte);
+}
+
+@media screen and (max-width: 790px) {
+    
+  body {
+    padding: 35%;
+  }
+
+  h1 {
+    margin-bottom: 30px;
+  }
+}
